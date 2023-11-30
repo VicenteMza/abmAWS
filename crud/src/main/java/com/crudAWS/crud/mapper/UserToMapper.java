@@ -13,7 +13,7 @@ public class UserToMapper {
                 .name(user.getName())
                 .lastName(user.getLastName())
                 .dni(user.getDni())
-                .birthdate(user.getBirthdate())
+                .birthday(user.getBirthday())
                 .profession(user.getProfession().getDescription())
                 .build();
     }
@@ -23,7 +23,7 @@ public class UserToMapper {
                 .name(mapper.getName())
                 .lastName(mapper.getLastName())
                 .dni(mapper.getDni())
-                .birthdate(mapper.getBirthdate())
+                .birthday(mapper.getBirthday())
                 .profession(getProfessionByDescription(mapper.getProfession()))
                 .build();
     }

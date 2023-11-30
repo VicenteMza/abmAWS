@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<h1>Crear usuario</h1>
+
+<form id="userForm">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="lastName">Apellido:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" required>
+
+    <label for="birthday">Fecha de nacimiento:</label>
+    <input type="date" id="birthday" name="birthday" placeholder="YYYY-MM-DD" required>
+
+    <label for="profession">Profesión:</label>
+        <select id="profession" name="profession" required>
+            <!-- Las opciones de profesión se llenarán dinámicamente desde JavaScript -->
+        </select>
+
+    <button type="submit" class="button-link" onclick="submitForm(event)">Crear Usuario</button>
+    <button type="button" onclick="window.location.href='index.html'" class="button-link">Volver</button>
+</form>
+
+<script src="./js/getProfession.js"></script>
+<script src="./js/createUser.js"></script>
+</body>
+</html>

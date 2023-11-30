@@ -46,7 +46,7 @@ public class UserServiceImpl implements IUserService{
         userBd.setName(user.getName());
         userBd.setLastName(user.getLastName());
         userBd.setDni(user.getDni());
-        userBd.setBirthdate(user.getBirthdate());
+        userBd.setBirthday(user.getBirthday());
         userBd.setProfession(user.getProfession());
 
     return repository.save(userBd);

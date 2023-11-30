@@ -33,7 +33,7 @@ function createRow(user){
     <td>${user.name}</td>
     <td>${user.lastName}</td>
     <td>${user.dni}</td>
-    <td>${user.birthdate}</td>
+    <td>${user.birthday}</td>
     <td>${user.profession}</td>
     <td>
         <button onclick="editUser(${user.id})">Edit</button>

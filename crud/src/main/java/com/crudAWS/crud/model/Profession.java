@@ -6,13 +6,13 @@ public enum Profession {
 	DEVELOPER ("Developer"),
 	MEDICO ("Médico");
 	
-	private java.lang.String description;
+	private String description;
 	
-	private Profession(java.lang.String desc) {
+	private Profession(String desc) {
 		this.description = desc;
 	}
 
-	public java.lang.String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 }
