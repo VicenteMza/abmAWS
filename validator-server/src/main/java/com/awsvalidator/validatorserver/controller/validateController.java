@@ -12,7 +12,6 @@ public class validateController {
 
     @PostMapping("/user")
     public ResponseEntity<?> validateUser(@Valid @RequestBody UserMapper mapper){
-        System.out.println(mapper);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 }

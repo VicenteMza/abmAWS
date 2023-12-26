@@ -37,8 +37,9 @@ function createRow(user){
     <td>${user.profession}</td>
     <td>
         <button onclick="editUser(${user.id})">Edit</button>
-        <button onclick="deleteUser(${user.id})">Delete</button>
+        <button onclick="deleteUser(${user.id}, ${user.name}, ${user.lastName}) class= "button-link">Eliminar</button>
     </td>
 `;
+
 return row;
 }
