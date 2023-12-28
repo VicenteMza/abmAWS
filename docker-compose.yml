@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./frontend-server
+      dockerfile: Dockerfile
+    image: vicentellanos/frontend_server:0.0.1
+    ports:
+      - "8082:8082"
+
+  validator:
+    build:
+      context: ./validator-server
+      dockerfile: Dockerfile
+    image: vicentellanos/validator_server:0.0.1
+    ports:
+      - "8081:8081"
+
+  crud:
+    build:
+      context: ./crud
+      dockerfile: Dockerfile
+    image: vicentellanos/crud_server:0.0.1
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mariadb
+    environment:
+      DATABASE_URL: mariadb
+
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: persona_db
